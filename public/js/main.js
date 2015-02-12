@@ -45,7 +45,6 @@ var Banner = function() {
               break;
 
             case 2:
-              hide(elipseBg, 0.01)
               hide(note1, 0.1)
               hide(text1, 0.1)
               show(elipse2, 0.1)
@@ -56,7 +55,6 @@ var Banner = function() {
             case 3:
               hide(elipse2, 0.1)
               hide(text2, 0.1)
-              hide(elipseBg, 0.01)
               show(elipse3, 0.1)
               show(conditions, 0.05)
               show(resetCont, 2.2)
@@ -111,7 +109,6 @@ var Banner = function() {
     }
 
 };
-
 
 //initializing new banner
 var myBanner = new Banner;
