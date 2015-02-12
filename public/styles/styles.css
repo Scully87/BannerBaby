@@ -4,10 +4,15 @@
 
 * {position:absolute; margin:0; padding:0;}
 
+body {
+  background-color: #000000;
+}
+
 #container {
   width: 300px;
   height: 250px;
   border: 1px solid #E0E0E0;
+  background-color: #FFFFFF;
 }
 
 /*==============
@@ -34,7 +39,7 @@
 =============*/
 
 #frame-1 {
-  display: none;
+  /*display: none;*/
 }
 
 #elipse1 {
@@ -75,7 +80,7 @@
 ===============*/
 
 #frame-3 {
-  /*display: none;*/
+  display: none;
 }
 
 #elipse3 {
