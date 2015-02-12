@@ -1,0 +1,71 @@
+/*===========
+    MAIN
+============*/
+
+* {position:absolute; margin:0; padding:0;}
+
+#container {
+  width: 300px;
+  height: 250px;
+  border: 1px solid #E0E0E0;
+}
+
+/*==============
+  COMMON IMAGES
+===============*/
+
+#logo {
+  top: 22px;
+  left: 169px;
+}
+
+#speedline {
+  top: 22px;
+  left: 0;
+}
+
+#oneworld {
+  top: 221px;
+  left: 13px;
+}
+
+/*=============
+   FRAME ONE
+=============*/
+
+#frame-1 {
+  display: none;
+}
+
+#elipse1 {
+  top: 0;
+  left: 0;
+}
+
+#note1 {
+  top: 63px;
+  left: 18px;
+}
+
+#text1 {
+  top: 189px;
+  left: 170px;
+}
+
+/*=============
+   FRAME TWO
+=============*/
+
+/*#frame-2 {
+  display: none;
+}*/
+
+#elipse2 {
+  top: 0;
+  left: 0;
+}
+
+#text2 {
+  top: 189px;
+  left: 151px;
+}
