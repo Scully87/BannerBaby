@@ -32,6 +32,7 @@ var Banner = function() {
               break;
 
             case 2:
+              hide(elipseBg, 0.01)
               hide(note1, 0.1)
               hide(text1, 0.1)
               show(elipse2, 0.1)

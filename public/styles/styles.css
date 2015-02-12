@@ -33,23 +33,12 @@
   top: 0;
   left: 0;
   z-index: 1;
-<<<<<<< HEAD
-  /*background-color: #FFFFFF;*/
-=======
->>>>>>> 9fbe773bba6e45d04679ddba91add4df835495ac
 }
 
 /*=============
    FRAME ONE
 =============*/
 
-<<<<<<< HEAD
-#frame-1 {
-  /*display: none;*/
-}
-
-=======
->>>>>>> 9fbe773bba6e45d04679ddba91add4df835495ac
 #elipse1 {
   top: 0;
   left: 0;
@@ -71,13 +60,6 @@
    FRAME TWO
 =============*/
 
-<<<<<<< HEAD
-#frame-2 {
-  /*display: none;*/
-}
-
-=======
->>>>>>> 9fbe773bba6e45d04679ddba91add4df835495ac
 #elipse2 {
   z-index: 1;
   top: 0;
@@ -93,13 +75,6 @@
    FRAME THREE
 ===============*/
 
-<<<<<<< HEAD
-#frame-3 {
-  /*display: none;*/
-}
-
-=======
->>>>>>> 9fbe773bba6e45d04679ddba91add4df835495ac
 #elipse3 {
   z-index: 1;
   top: 0;
@@ -150,10 +125,7 @@
 .hide {
     opacity: 0;
 }
+
 .show {
     opacity: 1;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9fbe773bba6e45d04679ddba91add4df835495ac
