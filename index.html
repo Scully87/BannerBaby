@@ -56,30 +56,5 @@
     <script type="text/javascript" src="public/js/TweenLite.min.js"></script>
     <script type="text/javascript" src="public/js/CSSPlugin.min.js"></script>
     <script type="text/javascript" src="public/js/main.js"></script>
-    <script>
-        var myBanner = new Banner;
-
-        // If true, start function. If false, listen for INIT.
-        window.onload = function() {
-          if (Enabler.isInitialized()) {
-              enablerInitHandler();
-          } else {
-              Enabler.addEventListener(studio.events.StudioEvent.INIT,
-        enablerInitHandler);
-          }
-        }
-
-        function enablerInitHandler() {
-            myBanner.init();
-        }
-
-        function getOpacity(element) {
-            if(element.currentStyle) {
-                return element.currentStyle['opacity'];
-            } else if(getComputedStyle(element)) {
-                return getComputedStyle(element).opacity;
-            }
-        }
-    </script>
   </body>
 </html>
