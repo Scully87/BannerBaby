@@ -139,3 +139,29 @@ var Banner = function() {
     }
 
 };
+
+
+//initializing new banner
+var myBanner = new Banner;
+
+// If true, start function. If false, listen for INIT.
+window.onload = function() {
+  if (Enabler.isInitialized()) {
+      enablerInitHandler();
+  } else {
+      Enabler.addEventListener(studio.events.StudioEvent.INIT,
+enablerInitHandler);
+  }
+}
+
+function enablerInitHandler() {
+    myBanner.init();
+}
+
+function getOpacity(element) {
+    if(element.currentStyle) {
+        return element.currentStyle['opacity'];
+    } else if(getComputedStyle(element)) {
+        return getComputedStyle(element).opacity;
+    }
+}
