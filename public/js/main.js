@@ -16,7 +16,49 @@ var Banner = function() {
       resetArrow = get('resetArrow'),
       resetCont = get('resetCont');
 
-    this.showFrame = function(id) {
+  var _loops = 0;
+
+  function storeElementData(element, arr) {
+
+          arr = typeof arr !== "undefined" ? arr : [];
+          arr["id"] = element.id;
+          if(element.currentStyle) {
+            arr["style"] = {top: element.currentStyle['top'], left: element.currentStyle['left'], height: element.currentStyle['height']};
+          } else if(getComputedStyle(element)) {
+          arr["style"] = {top: getComputedStyle(element).top, left: getComputedStyle(element).left, height: getComputedStyle(element).height, opacity: getComputedStyle(element).opacity};
+          }
+
+          if (element.children.length > 0) {
+                  arr["children"] = [];
+                  for(var i = 0; i < element.children.length; i++) {
+                          arr["children"][i] = storeElementData(element.children[i], arr["children"][i]);
+                  }
+          }
+
+          return arr;
+  }
+
+  /*
+   * resets elements using arrays created in storeElData
+   */
+  function reset(arr) {
+
+          if(arr["id"] !== "") {
+            var style = "";
+            for(var prop in arr["style"]) {
+                style += prop + ":" + arr["style"][prop] + ";";
+            }
+            TweenLite.killTweensOf(arr['id']);
+            document.getElementById(arr["id"]).setAttribute("style", style);
+          }
+          if(arr["children"]) {
+              for (var i = 0; i < arr["children"].length; i++) {
+                reset(arr["children"][i]);
+              }
+          }
+  }
+
+    var showFrame = function(id) {
       console.log('Showing frame ' + id);
         switch(id) {
 
@@ -46,6 +88,11 @@ var Banner = function() {
               holdFrame(4, 5)
               break;
         }
+
+      resetCont.addEventListener("click", function(event) {
+         showFrame(1);
+      });
+
     }
 
     function setClass(element, time, state) {
@@ -63,16 +110,15 @@ var Banner = function() {
         setClass(element, time, "hide");
     }
 
-    var that = this;
     var holdFrame = function(frame, time) {
         var delay = time * 1000;
         window.setTimeout(function(){
-            that.showFrame(frame);
+          showFrame(frame);
         }, delay);
     }
 
     this.init = function() {
-        this.showFrame(1);
+        showFrame(1);
     };
 
   resetCont.addEventListener('mouseover', function(event) {
