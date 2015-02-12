@@ -56,9 +56,9 @@
    FRAME TWO
 =============*/
 
-/*#frame-2 {
+#frame-2 {
   display: none;
-}*/
+}
 
 #elipse2 {
   top: 0;
@@ -68,4 +68,37 @@
 #text2 {
   top: 189px;
   left: 151px;
+}
+
+/*==============
+   FRAME THREE
+===============*/
+
+#frame-3 {
+  /*display: none;*/
+}
+
+#elipse3 {
+  top: 0;
+  left:0;
+}
+
+#conditions {
+  top: 226px;
+  left: 39px;
+}
+
+#direct {
+  top: 71px;
+  left: 31px;
+}
+
+#button {
+  top: 111px;
+  left: 38px;
+}
+
+#dotcom {
+  top: 117px;
+  left: 59px;
 }
