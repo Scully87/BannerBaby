@@ -2,7 +2,7 @@
     MAIN
 ============*/
 
-* {position:absolute; margin:0; padding:0;}
+* {position:absolute; margin:0; padding:0; cursor:pointer;}
 
 body {
   background-color: #000000;
@@ -34,6 +34,13 @@ body {
   left: 13px;
 }
 
+#elipse-background {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /*background-color: #FFFFFF;*/
+}
+
 /*=============
    FRAME ONE
 =============*/
@@ -45,11 +52,13 @@ body {
 #elipse1 {
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 #note1 {
   top: 63px;
   left: 18px;
+  z-index: 2;
 }
 
 #text1 {
@@ -62,10 +71,11 @@ body {
 =============*/
 
 #frame-2 {
-  display: none;
+  /*display: none;*/
 }
 
 #elipse2 {
+  z-index: 1;
   top: 0;
   left: 0;
 }
@@ -80,10 +90,11 @@ body {
 ===============*/
 
 #frame-3 {
-  display: none;
+  /*display: none;*/
 }
 
 #elipse3 {
+  z-index: 1;
   top: 0;
   left:0;
 }
@@ -96,14 +107,44 @@ body {
 #direct {
   top: 71px;
   left: 31px;
+  z-index: 2;
 }
 
 #button {
   top: 111px;
   left: 38px;
+  z-index: 2;
 }
 
 #dotcom {
   top: 117px;
   left: 59px;
+  z-index: 3;
+}
+
+#resetArrow {
+  height: 27px;
+  width: 22px;
+  top: 220px;
+  left: 270px;
+}
+
+/*================
+    TRANSITION
+=================*/
+
+.hide, .show {
+    -webkit-transition: all 0.75s ease-in-out;
+    -moz-transition: all 0.75s ease-in-out;
+    -o-transition: all 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
+}
+
+.hide {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.show {
+    opacity: 1;
+    filter: alpha(opacity=100);
 }
