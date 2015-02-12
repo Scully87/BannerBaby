@@ -4,7 +4,20 @@ var Banner = function() {
       return document.getElementById(element);
     }
 
-    var container = get('container'),
+    var container,
+        common,
+        elipseBg,
+        note1,
+        text1,
+        elipse2,
+        text2,
+        elipse3,
+        conditions,
+        resetArrow ,
+        resetCont
+
+    var that = this,
+        container = get('container'),
         common = get('common'),
         elipseBg = get('elipse-background'),
         note1 = get('note1'),
@@ -90,53 +103,11 @@ var Banner = function() {
       TweenLite.to(resetArrow, 0.5, {css:{rotation: '180deg'}});
     });
 
-    function storeElementData(element, arr) {
-
-            arr = typeof arr !== "undefined" ? arr : [];
-            arr["id"] = element.id;
-            if(element.currentStyle) {
-
-            arr["style"] =  {
-                              top: element.currentStyle['top'],
-                              left: element.currentStyle['left'],
-                              height: element.currentStyle['height']
-                            };
-
-            } else if(getComputedStyle(element)) {
-
-            arr["style"] =  {
-                              top: getComputedStyle(element).top,
-                              left: getComputedStyle(element).left,
-                              height: getComputedStyle(element).height,
-                              opacity: getComputedStyle(element).opacity
-                            };
-            }
-
-            if (element.children.length > 0) {
-                    arr["children"] = [];
-                    for(var i = 0; i < element.children.length; i++) {
-                            arr["children"][i] = storeElementData(element.children[i], arr["children"][i]);
-                    }
-            }
-
-            return arr;
-    }
-
-    function reset(arr) {
-
-            if(arr["id"] !== "") {
-              var style = "";
-              for(var prop in arr["style"]) {
-                  style += prop + ":" + arr["style"][prop] + ";";
-              }
-              TweenLite.killTweensOf(arr['id']);
-              document.getElementById(arr["id"]).setAttribute("style", style);
-            }
-            if(arr["children"]) {
-                for (var i = 0; i < arr["children"].length; i++) {
-                  reset(arr["children"][i]);
-                }
-            }
+    function reset() {
+        container.replaceChild(_resetCont, resetCont);
+        resetCont = get('resetCont');
+        setElements();
+        that.showFrame(1);
     }
 
 };
