@@ -63,6 +63,9 @@ var Banner = function() {
         switch(id) {
 
             case 1:
+              hide(elipse3, 0.1)
+              hide(conditions, 0.05)
+              hide(resetCont, 0.1)
               show(elipseBg, 0.15)
               show(note1, 0.15)
               show(text1, 0.2)
