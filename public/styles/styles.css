@@ -4,15 +4,10 @@
 
 * {position:absolute; margin:0; padding:0; cursor:pointer;}
 
-body {
-  background-color: #000000;
-}
-
 #container {
   width: 300px;
   height: 250px;
   border: 1px solid #E0E0E0;
-  background-color: #FFFFFF;
 }
 
 /*==============
@@ -142,9 +137,7 @@ body {
 
 .hide {
     opacity: 0;
-    filter: alpha(opacity=0);
 }
 .show {
     opacity: 1;
-    filter: alpha(opacity=100);
 }
