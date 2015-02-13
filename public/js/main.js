@@ -4,20 +4,9 @@ var Banner = function() {
       return document.getElementById(element);
     }
 
-    var container,
-        common,
-        elipseBg,
-        note1,
-        text1,
-        elipse2,
-        text2,
-        elipse3,
-        conditions,
-        resetArrow ,
-        resetCont
-
     var that = this,
         container = get('container'),
+        speedLine = get('speedline'),
         common = get('common'),
         elipseBg = get('elipse-background'),
         note1 = get('note1'),
@@ -38,6 +27,7 @@ var Banner = function() {
               hide(conditions, 0.05)
               hide(resetCont, 0.1)
               show(elipseBg, 0.15)
+              show(speedLine, 0.5)
               show(note1, 0.15)
               show(text1, 0.2)
               show(common, 0.2)
