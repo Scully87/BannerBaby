@@ -32,7 +32,7 @@ var Banner = function() {
               show(text1, 0.2)
               show(common, 0.2)
               holdFrame(2, 5)
-              break;
+            break;
 
             case 2:
               hide(note1, 0.1)
@@ -40,16 +40,18 @@ var Banner = function() {
               show(elipse2, 0.1)
               show(text2, 0.1)
               holdFrame(3, 5)
-              break;
+            break;
 
             case 3:
+              show(speedLine, 0.5)
+              hide(elipseBg, 0.1)
               hide(elipse2, 0.1)
               hide(text2, 0.1)
-              show(elipse3, 0.1)
+              show(elipse3, 0.3)
               show(conditions, 0.05)
               show(resetCont, 2.2)
               holdFrame(4, 5)
-              break;
+            break;
         }
 
       resetCont.addEventListener("click", function(event) {
