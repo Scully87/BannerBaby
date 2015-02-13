@@ -110,10 +110,8 @@ var Banner = function() {
 
 };
 
-//initializing new banner
 var myBanner = new Banner;
 
-// If true, start function. If false, listen for INIT.
 window.onload = function() {
   if (Enabler.isInitialized()) {
       enablerInitHandler();
