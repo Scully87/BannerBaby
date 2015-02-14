@@ -109,7 +109,7 @@ window.onload = function() {
       enablerInitHandler();
   } else {
       Enabler.addEventListener(studio.events.StudioEvent.INIT,
-enablerInitHandler);
+      enablerInitHandler);
   }
 }
 
